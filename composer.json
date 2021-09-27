@@ -19,6 +19,7 @@
     ],
     "require": {
         "php": "^8.0",
+        "buzzingpixel/craft-slim-bridge": "dev-master",
         "craftcms/cms": "^3.7"
     },
     "require-dev": {
