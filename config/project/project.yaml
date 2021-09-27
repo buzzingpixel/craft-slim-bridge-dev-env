@@ -1,0 +1,27 @@
+dateModified: 1632778660
+email:
+  fromEmail: tj@buzzingpixel.com
+  fromName: 'Craft Slim Bridge'
+  transportType: craft\mail\transportadapters\Sendmail
+meta:
+  __names__:
+    48c785f2-6b8a-4249-a06f-85fc5e9d3658: 'Craft Slim Bridge' # Craft Slim Bridge
+    a39020df-8ab1-4178-89f1-b8b345546554: 'Craft Slim Bridge' # Craft Slim Bridge
+    af0f9be9-eb24-4e9d-9ea9-f7e37576ced9: Common # Common
+plugins:
+  slim-bridge:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+system:
+  edition: solo
+  live: true
+  name: 'Craft Slim Bridge'
+  schemaVersion: 3.7.8
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  requireEmailVerification: true
