@@ -18,7 +18,8 @@
         }
     ],
     "require": {
-        "php": "^8.0"
+        "php": "^8.0",
+        "craftcms/cms": "^3.7"
     },
     "require-dev": {
         "buzzingpixel/twig-dumper": "^1.0",
