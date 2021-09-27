@@ -1,0 +1,64 @@
+version: '3.7'
+
+services:
+  app:
+    env_file:
+      - .env
+      - .env.local
+    container_name: craft-slim-bridge-dev-app
+    image: craft-slim-bridge-dev-app
+    environment:
+      HOSTNAME: craft-slim-bridge-dev-app
+      ENABLE_PHP_DEV_CONFIG: 1
+    volumes:
+      - .:/opt/project:delegated
+      - ../craft-slim-bridge:/craft-slim-bridge:delegated
+    networks:
+      - web
+      - default
+    expose:
+      - 80
+    ports:
+      - "17863:80"
+    labels:
+      - traefik.enable=true
+      - traefik.docker.network=traefik-dev_default
+
+      # Non-SSL Local
+      - traefik.http.routers.craft-slim-bridge-local.entrypoints=web
+      - traefik.http.routers.craft-slim-bridge-local.rule=Host(`craft-slim-bridge.localtest.me`)
+      - traefik.http.routers.craft-slim-bridge-local.middlewares=https-redirect
+
+      # SSL Local
+      - traefik.http.routers.craft-slim-bridge-secure-local.entrypoints=websecure
+      - traefik.http.routers.craft-slim-bridge-secure-local.tls=true
+      - traefik.http.routers.craft-slim-bridge-secure-local.rule=Host(`craft-slim-bridge.localtest.me`)
+
+  db:
+    env_file:
+      - .env
+      - .env.local
+    container_name: craft-slim-bridge-dev-db
+    image: craft-slim-bridge-dev-db
+    environment:
+      HOSTNAME: craft-slim-bridge-dev-db
+      MYSQL_ALLOW_EMPTY_PASSWORD: "no"
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${DB_NAME}
+      MYSQL_USER: ${DB_USER}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+    volumes:
+      - db-volume:/var/lib/mysql
+    ports:
+      - "17864:3306"
+    networks:
+      default:
+        aliases:
+          - craft-slim-bridge-dev-db
+
+volumes:
+  db-volume:
+
+networks:
+  web:
+    name: traefik-dev_default
