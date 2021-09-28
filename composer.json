@@ -20,11 +20,14 @@
     "require": {
         "php": "^8.0",
         "buzzingpixel/craft-slim-bridge": "dev-master",
-        "craftcms/cms": "^3.7"
+        "craftcms/cms": "^3.7",
+        "doctrine/annotations": "^1.13",
+        "php-di/php-di": "^6.3"
     },
     "require-dev": {
         "buzzingpixel/twig-dumper": "^1.0",
-        "filp/whoops": "^2.9"
+        "filp/whoops": "^2.9",
+        "symfony/var-dumper": "^5.3"
     },
     "autoload": {
         "psr-4": {
