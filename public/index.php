@@ -15,6 +15,10 @@ require_once CRAFT_VENDOR_PATH . '/autoload.php';
 define('CRAFT_ENVIRONMENT', getenv('ENVIRONMENT') ?: 'production');
 // ...
 
+if (class_exists(\Symfony\Component\VarDumper\VarDumper::class)) {
+    require dirname(__DIR__) . '/config/dumper.php';
+}
+
 // Load and run Craft
 /** @var craft\web\Application $app */
 $app = require CRAFT_VENDOR_PATH . '/craftcms/cms/bootstrap/web.php';
