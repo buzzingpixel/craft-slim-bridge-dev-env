@@ -1,13 +1,16 @@
-dateModified: 1632778660
+dateModified: 1633976465
 email:
   fromEmail: tj@buzzingpixel.com
   fromName: 'Craft Slim Bridge'
   transportType: craft\mail\transportadapters\Sendmail
 meta:
   __names__:
+    07d1be92-dde4-460d-86ae-5e383a1f1f0e: Default # Default
+    9f74858e-0235-4310-b504-83ba3df99469: 'Test Section' # Test Section
     48c785f2-6b8a-4249-a06f-85fc5e9d3658: 'Craft Slim Bridge' # Craft Slim Bridge
     a39020df-8ab1-4178-89f1-b8b345546554: 'Craft Slim Bridge' # Craft Slim Bridge
     af0f9be9-eb24-4e9d-9ea9-f7e37576ced9: Common # Common
+    e00ee595-6fd2-4edf-84c8-06ad1976b3ce: 'Test Category Group' # Test Category Group
 plugins:
   slim-bridge:
     edition: standard

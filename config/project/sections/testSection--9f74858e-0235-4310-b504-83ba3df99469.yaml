@@ -1,0 +1,12 @@
+defaultPlacement: end
+enableVersioning: true
+handle: testSection
+name: 'Test Section'
+propagationMethod: all
+siteSettings:
+  48c785f2-6b8a-4249-a06f-85fc5e9d3658: # Craft Slim Bridge
+    enabledByDefault: true
+    hasUrls: true
+    template: _slimBridge/\App\Http\Response\DoSomethingAction
+    uriFormat: 'test-section/{slug}'
+type: channel
