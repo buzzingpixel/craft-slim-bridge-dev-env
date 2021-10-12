@@ -1,0 +1,41 @@
+defaultPlacement: end
+fieldLayouts:
+  9e0f8fd6-6f4b-4ad4-a2c8-ff10d3285725:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\TitleField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+handle: testCategoryGroup
+name: 'Test Category Group'
+siteSettings:
+  48c785f2-6b8a-4249-a06f-85fc5e9d3658: # Craft Slim Bridge
+    hasUrls: true
+    template: _slimBridge/\App\Http\Response\DoOtherAction
+    uriFormat: 'test-category-group/{slug}'
+structure:
+  maxLevels: null
+  uid: cf9678bc-eae1-48fb-96f3-4352e66fc34a
